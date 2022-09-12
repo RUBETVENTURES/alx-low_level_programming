@@ -4,31 +4,29 @@
 /**
  * main - Entry point
  *
- * Return: Always 0
+ * Description: using the main function
+ * this program prints "programming is positive, zero, or negative
+ * Return: 0
  */
 int main(void)
 {
-	int n, s;
+	int n;
+	int l;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	s = n % 10;
-	if (s > 5)
+	l = n % 10;
+
+	if (l > 5)
 	{
-		printf("Last digit of %d is %d and is greater than 5\n", n, s);
+		printf("Last digit of %d is %d and is greater than 5\n", n, l);
 	}
-<<<<<<< HEAD
-	if (num == 0)
-=======
-	else if (s == 0)
-		printf("Last digit of %d is %d and is 0\n", n, s);
+	else if (l == 0)
+		printf("Last digit of %d is %d and is 0\n", n, l);
 }
-<<<<<<< HEAD
-if (num < 6)
-=======
-else if (s < 6)
+else 
 {
-	printf("Last digit of %d is %d and is less than 6 and not 0\n", n,s);
+	printf("Last digit of %d is %d and is less than 6 and not 0\n", n,l);
 }
 return (0);
 }
