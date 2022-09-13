@@ -13,6 +13,7 @@ int main(void)
 	int e;
 
 	while (c <= 99)
+	{
 		d = (c / 10 + '0');
 	e = (c % 10 + '0');
 	if (d < e)
@@ -21,7 +22,7 @@ int main(void)
 		putchar(e);
 			if (c != 89)
 			{
-				putchar (',');
+				putchar(',');
 				putchar(' ');
 			}
 	}
