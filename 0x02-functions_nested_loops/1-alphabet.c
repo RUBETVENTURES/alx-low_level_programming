@@ -3,16 +3,18 @@
  * print_alphabet - prints the alphabet, in lowercase,
  * followed by a new line
  *
- * Reurn: 0
+ * Return: 0
  */
 
 void print_alphabet(void)
 {
-	char n;
+	char alp = 'a';
 
-	for (n = 'a'; n <= 'z'; n++)
+	while (alp <= 'z')
 	{
-		_putchar(n);
+		_putchar (alp);
+		alp++;
+
 	}
 	_putchar('\n');
 }
