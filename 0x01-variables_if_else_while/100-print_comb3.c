@@ -18,7 +18,7 @@ int main(void)
 	if (d < e)
 	{
 		putchar(d);
-		putchar(e)
+		putchar(e);
 			if (c != 89)
 			{
 				putchar (',');
@@ -27,5 +27,6 @@ int main(void)
 	}
 	c++;
 }
-putchar('\n');return (0);
+putchar('\n');
+return (0);
 }
