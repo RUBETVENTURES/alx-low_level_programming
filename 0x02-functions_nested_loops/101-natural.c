@@ -11,12 +11,12 @@ int main(void)
 	int m3 = 3;
 	int m5 = 5;
 	int sum = 0;
-	int limit = 1024;
+	int lim = 1024;
 
 	while (i == 0)
 	{
 
-		if (m3 < lin)
+		if (m3 < lim)
 		{
 			sum += m3;
 			m3 += 3;
