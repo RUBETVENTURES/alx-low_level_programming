@@ -1,7 +1,7 @@
 #include "main.h"
 /**
  * _isalpha - a function that checks for al[ha character
- * Description: single letter input
+ * @c: single letter input
  * Return: 1 if c is a letter (lower or uppercase), 0 if otherwise
  */
 int _isalpha(int c)
