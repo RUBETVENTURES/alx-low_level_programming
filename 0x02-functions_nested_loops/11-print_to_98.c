@@ -1,5 +1,5 @@
 #include "main.h"
-include "stdio.h"
+#include "stdio.h"
 /**
  * print_to_98 - print all the numbers between the provided number and 98
  * @n: number to start at
