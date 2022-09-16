@@ -10,9 +10,7 @@
 
 int _isupper(int c)
 {
-	int i = isupper(c);
-
-	if (i > 0)
+	if (c >= 65 && c <= 90)
 	{
 		return (1);
 	}
