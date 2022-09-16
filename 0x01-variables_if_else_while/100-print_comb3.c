@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <unistd.h>
 /**
  * main-Entry point
  *
@@ -8,26 +9,22 @@
  */
 int main(void)
 {
-	int c = 0;
-	int d;
-	int e;
+	int c, i;
 
-	while (c <= 99)
+	for (c = '0'; c <= '9'; c++)
 	{
-		d = (c / 10 + '0');
-	e = (c % 10 + '0');
-	if (d < e)
-	{
-		putchar(d);
-		putchar(e);
-			if (c != 89)
+		for (i = '0'; i <= '9'; i++)
+		{
+			putchar(c);
+			putchar(i);
+
+			if (c != '8' || (c == '8' && i != '9'))
 			{
 				putchar(',');
 				putchar(' ');
 			}
+		}
 	}
-	c++;
 }
 putchar('\n');
 return (0);
-}
