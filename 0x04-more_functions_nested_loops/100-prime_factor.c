@@ -10,7 +10,7 @@
 int main(void)
 {
 	long int x = 612852475143;
-	long int py;
+	int py;
 
 	for (py = 2; py < x; py++)
 	{
