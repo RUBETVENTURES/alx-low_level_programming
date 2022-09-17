@@ -3,9 +3,9 @@
 /**
  * print_numbers - print numbers between 0 to 9
  *
- * Return: void
+ * Return: 0
  */
-extern int print_numbers(void)
+int print_numbers(void)
 {
 	int i;
 
