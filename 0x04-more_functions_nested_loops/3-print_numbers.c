@@ -5,7 +5,7 @@
  *
  * Return: void
  */
-void print_numbers(void)
+extern int print_numbers(void)
 {
 	int i;
 
