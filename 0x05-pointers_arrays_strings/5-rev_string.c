@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * rev_string: rev string
+ * rev_string - rev string
  * @s: string
  */
 
