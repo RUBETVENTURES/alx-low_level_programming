@@ -17,7 +17,7 @@ char *_strstr(char *haystack, char *needle)
 	for (; haystack != 0; haystack++)
 	{
 		if (*haystack != *x)
-			continues;
+			continue;
 		w = haystack;
 		while (1)
 		{
