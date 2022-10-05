@@ -1,65 +1,61 @@
-#include <stdio.h>
-#include "main.h"
-
+#include <string.h>
+#include <stdlib.h>
 /**
- * _strlen - length of a string
- * @s: input char
- * Return: length of a string
+ * append_to_string - appends a string to another
+ * @index: pointer to the index
+ * @str1: the pointer to the concatenating string
+ * @str2: the string to concatenate
+ * Return: void
  */
-
-int _strlen(char *s)
+void append_to_string(int *index, char *str1, char *str2)
 {
-	int l = 0;
+	int i = 0;
+	int len = strlen(str2);
 
-	while (*s != '\0')
+	while (i <= len)
 	{
-		s++;
-		l++;
-	}
-	return (l);
+		if (*(str2 + i) == '\0')
+			*(str1 + *index) = '\n';
+		else
+			*(str1 + *index) = *(str2 + i);
+		*index += 1;
+		i++;
+	};
 }
 
 /**
- * argstostr - concat
- * @ac: count
- * @av: vector
- * Return: string
+ * argstostr -  concatenates all the arguments of your program.
+ * @ac: argument count
+ * @av: argument vector
+ * Return: a pointer to the concatenated string
  */
-
 char *argstostr(int ac, char **av)
 {
-	int i, j, k;
-	int len, R = 0;
-	char *p;
+	char *concat;
+	int size, index, x, y;
+	int *index_ptr;
 
-	if (!ac || !av)
-	{
+	size = 0;
+	if (ac == 0 || av == NULL)
 		return (NULL);
-	}
-	R = 0;
-
-	for (i = 0; i < ac; i++)
+	for (x = 0; x < ac; x++)
 	{
-		len = _strlen(av[i]) + 1;
-		R += len;
-	}
-	p = malloc(sizeof(char) * R + 1);
-
-	if (!p)
+		if (av[x] == NULL)
+			return (NULL);
+		for (y = 0; av[x][y] != '\0'; y++)
+			size += 1;
+		size += 1;
+	};
+	concat = malloc((sizeof(char)) * (size + 1));
+	if (concat == NULL)
 	{
+		free(concat);
 		return (NULL);
-	}
-
-	for (i = 0; i < ac; i++)
-	{
-		len = _strlen(av[i]);
-
-		for (j = 0; j < len; j++, k++)
-		{
-			p[k] = av[i][j];
-		}
-		p[k++] = '\n';
-	}
-	p[k] = '\0';
-	return (p);
+	};
+	index = 0;
+	index_ptr = &index;
+	for (x = 0; x < ac; x++)
+		append_to_string(index_ptr, concat, av[x]);
+	*(concat + size) = '\0';
+	return (concat);
 }
