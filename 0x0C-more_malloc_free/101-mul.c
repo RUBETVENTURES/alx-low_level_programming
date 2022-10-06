@@ -19,7 +19,7 @@ void check_dig(char *arr, int len)
 			printf("Error\n");
 			exit(98);
 		};
-	};
+	;}
 }
 /**
  * main -Entry point
@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
 
 	if (argc != 3)
 	{
-		printf("%d\n", "Error");
+		printf("%s\n", "Error");
 		exit(98);
 	}
 	check_dig(argv[1], strlen(argv[1]));
